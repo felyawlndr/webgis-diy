@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WebGIS Kependudukan DIY</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="data/logo unud.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        src="data/logo instansi.png"
+        alt="Logo Instansi"
+        class="logo-instansi"
+      />
+      <h1>WebGIS Kependudukan DIY</h1>
+      <p>
+        Aplikasi untuk menampilkan informasi jumlah penduduk kabupaten/kota di
+        Daerah Istimewa Yogyakarta
+      </p>
+    </header>
+
+    <main class="main-content">
+      <aside class="info-panel">
+        <h2>Informasi Wilayah</h2>
+        <p id="status">
+          Pilih wilayah untuk melihat informasi kependudukan kabupaten/kota di
+          Daerah Istimewa Yogyakarta
+        </p>
+
+        <label for="wilayah-select"> Pilih Kabupaten/Kota </label>
+        <select id="wilayah-select">
+          <option value="">Pilih Wilayah</option>
+        </select>
+        <button class="button" id="btn-peta">Tampilkan Peta</button>
+      </aside>
+
+      <section class="map-container">
+        <div id="map"></div>
+
+        <div class="map-legend">
+          <h3>Kepadatan Penduduk (jiwa/km²)</h3>
+
+          <div class="legend-item">
+            <span class="legend-color low"></span>
+            <span>&lt; 2.000</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-color medium"></span>
+            <span>2.000 – 10.000</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-color high"></span>
+            <span>&gt; 10.000</span>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      <h2 class="header-footer">Informasi WebGIS</h2>
+      <p class="paragraph-footer">
+        WebGIS ini menampilkan informasi kependudukan pada wilayah
+        kabupaten/kota di Daerah Istimewa Yogyakarta.
+      </p>
+      <a href="https://www.bps.go.id"> Sumber Data </a>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
